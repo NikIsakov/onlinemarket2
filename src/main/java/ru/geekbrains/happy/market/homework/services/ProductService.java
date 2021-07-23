@@ -21,6 +21,10 @@ public class ProductService {
         return productRepository.findById(id).map(ProductDto::new);
     }
 
+    public Product findProductByIdForCart(Long id){ //для добавления в корзину CartService
+        return productRepository.findById(id).get();
+    }
+
     public Page<ProductDto> findAll(Specification<Product> spec, int page, int pageSize) {
         if(page < 0)
             throw new RuntimeException();
