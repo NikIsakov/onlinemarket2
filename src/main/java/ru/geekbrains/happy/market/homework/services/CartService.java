@@ -1,19 +1,25 @@
 package ru.geekbrains.happy.market.homework.services;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.happy.market.homework.model.Product;
+import ru.geekbrains.happy.market.homework.model.ProductDto;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 @Data
+@NoArgsConstructor
 public class CartService {
-    Map<Product,Integer> productInCart = new LinkedHashMap<>();
+    private List<Optional<ProductDto>> productInCart = new ArrayList<>();
+    private ProductService productService;
 
-    public void addProductToCart(Product product, int count) {
-        productInCart.put(product, count);
+    public void clear() {
+        productInCart.clear();
     }
 
+    public void addProductToCart(Long id) {
+        Optional<ProductDto> product = productService.findProductById(id);
+        productInCart.add(product);
+    }
 }
