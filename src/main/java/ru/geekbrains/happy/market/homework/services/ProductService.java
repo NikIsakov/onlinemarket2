@@ -5,8 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.happy.market.homework.model.Product;
-import ru.geekbrains.happy.market.homework.model.ProductDto;
+import ru.geekbrains.happy.market.homework.entities.Product;
+import ru.geekbrains.happy.market.homework.entitiesDto.ProductDto;
 import ru.geekbrains.happy.market.homework.repositories.ProductRepository;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class ProductService {
         return productRepository.findById(id).map(ProductDto::new);
     }
 
-    public Product findProductByIdForCart(Long id){ //для добавления в корзину CartService
+    public Product findProductByIdForCart(Long id){
         return productRepository.findById(id).get();
     }
 

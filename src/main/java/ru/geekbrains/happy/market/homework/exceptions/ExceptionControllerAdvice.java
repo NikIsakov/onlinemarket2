@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import ru.geekbrains.happy.market.homework.exceptions.MarketError;
-import ru.geekbrains.happy.market.homework.exceptions.ResourceNotFoundException;
 
 @Slf4j
 @ControllerAdvice

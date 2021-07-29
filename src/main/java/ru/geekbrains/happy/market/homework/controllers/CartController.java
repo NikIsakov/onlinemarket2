@@ -2,7 +2,7 @@ package ru.geekbrains.happy.market.homework.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.geekbrains.happy.market.homework.model.Product;
+import ru.geekbrains.happy.market.homework.entities.Product;
 import ru.geekbrains.happy.market.homework.services.CartService;
 
 import java.util.List;

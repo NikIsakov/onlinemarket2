@@ -1,4 +1,4 @@
-package ru.geekbrains.happy.market.exceptions;
+package ru.geekbrains.happy.market.homework.exceptions;
 
 public class NoAuthException extends RuntimeException {
     public NoAuthException(String message) {

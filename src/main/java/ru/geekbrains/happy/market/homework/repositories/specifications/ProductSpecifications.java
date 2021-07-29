@@ -2,7 +2,7 @@ package ru.geekbrains.happy.market.homework.repositories.specifications;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.MultiValueMap;
-import ru.geekbrains.happy.market.homework.model.Product;
+import ru.geekbrains.happy.market.homework.entities.Product;
 
 public class ProductSpecifications {
     private static Specification<Product> priceGreaterOrEqualsThan(int minPrice) {

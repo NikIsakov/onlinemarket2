@@ -1,4 +1,4 @@
-package ru.geekbrains.happy.market.model.entities;
+package ru.geekbrains.happy.market.homework.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,5 +31,4 @@ public class Product {
     @Column(name = "updated_at")
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
 }

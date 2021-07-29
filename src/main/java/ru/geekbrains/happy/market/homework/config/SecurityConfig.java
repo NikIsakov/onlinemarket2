@@ -14,8 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import ru.geekbrains.happy.market.homework.services.UserService;
 
 @Configuration
-@EnableWebSecurity //отключает стандартные настройки безопасности Spring Security и начинает использовать правила, прописанные в SecurityConfig
-@EnableGlobalMethodSecurity(securedEnabled = true) //активирует возможность ставить защиту на уровне методов (для этого над методами ставятся аннотации @Secured и @PreAuthorized)
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired

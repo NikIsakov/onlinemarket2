@@ -5,14 +5,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import ru.geekbrains.happy.market.homework.exceptions.ResourceNotFoundException;
-import ru.geekbrains.happy.market.homework.model.Product;
-import ru.geekbrains.happy.market.homework.model.ProductDto;
-import ru.geekbrains.happy.market.homework.repositories.ProductRepository;
+import ru.geekbrains.happy.market.homework.entities.Product;
+import ru.geekbrains.happy.market.homework.entitiesDto.ProductDto;
 import ru.geekbrains.happy.market.homework.services.ProductService;
 import ru.geekbrains.happy.market.homework.repositories.specifications.ProductSpecifications;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
@@ -42,7 +38,7 @@ public class ProductController {
         return productService.saveOrUpdate(product);
     }
 
-    @GetMapping("/delete{id}")
+    @DeleteMapping("/delete{id}")
     public void delete(@PathVariable Long id){
         productService.deleteById(id);
     }

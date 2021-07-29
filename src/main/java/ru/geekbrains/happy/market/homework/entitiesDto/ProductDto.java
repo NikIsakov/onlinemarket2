@@ -1,7 +1,8 @@
-package ru.geekbrains.happy.market.homework.model;
+package ru.geekbrains.happy.market.homework.entitiesDto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.geekbrains.happy.market.homework.entities.Product;
 
 @Data
 @NoArgsConstructor

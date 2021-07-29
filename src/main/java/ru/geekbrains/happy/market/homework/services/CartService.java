@@ -3,8 +3,7 @@ package ru.geekbrains.happy.market.homework.services;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.geekbrains.happy.market.homework.model.Product;
-import ru.geekbrains.happy.market.homework.model.ProductDto;
+import ru.geekbrains.happy.market.homework.entities.Product;
 
 import java.util.*;
 
