@@ -1,4 +1,4 @@
-package ru.geekbrains.happy.market.exceptions;
+package ru.geekbrains.happy.market.homework.exceptions;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -15,12 +15,5 @@ public class ExceptionControllerAdvice {
         log.error(e.getMessage());
         MarketError err = new MarketError(HttpStatus.NOT_FOUND.value(), e.getMessage());
         return new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<?> handleNoAuthException(NoAuthException e) {
-        log.error(e.getMessage());
-        MarketError err = new MarketError(HttpStatus.UNAUTHORIZED.value(), e.getMessage());
-        return new ResponseEntity<>(err, HttpStatus.UNAUTHORIZED);
     }
 }

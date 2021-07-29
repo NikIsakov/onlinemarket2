@@ -1,4 +1,4 @@
-package ru.geekbrains.happy.market.exceptions;
+package ru.geekbrains.happy.market.homework.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {
