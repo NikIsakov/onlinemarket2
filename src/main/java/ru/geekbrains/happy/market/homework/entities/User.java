@@ -4,10 +4,11 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
-@Table(name = "users")
+@Table(name = "user_table")
 public class User {
 
     @Id
@@ -35,6 +36,9 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "score_id"))
     private Collection<Score> scores;
+
+    @OneToMany(mappedBy = "user_table")
+    List<Order> orders;
 
 
 }
