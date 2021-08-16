@@ -1,15 +1,10 @@
 package entities;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 import ru.geekbrains.market.homework.entities.Cart;
 import ru.geekbrains.market.homework.entities.Category;
 import ru.geekbrains.market.homework.entities.Discount;
 import ru.geekbrains.market.homework.entities.OrderItems;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
