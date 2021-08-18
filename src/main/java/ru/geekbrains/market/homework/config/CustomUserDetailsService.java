@@ -15,7 +15,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public CustomUserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userService.findByUsername(s); // exseption: Optional<ru.geekbrains.market.homework.entities.User>
+        User user = userService.findByUsername(s); // exseption: Optional<entities.User>
         return CustomUserDetails.fromUserEntityToCustomUserDetails(user);
     }
 }

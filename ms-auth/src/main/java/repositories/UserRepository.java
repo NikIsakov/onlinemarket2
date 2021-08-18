@@ -1,12 +1,15 @@
-package ru.geekbrains.market.homework.repositories;
+package repositories;
 
+import entities.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import ru.geekbrains.market.homework.entities.User;
+
 
 import java.util.Optional;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
     Optional<User> findByUsername(String username);
+
+    User findByEmail(String email);
 }

@@ -14,4 +14,12 @@
     <version>0.0.1</version>
     <name>ms-auth</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>ru.geekbrains</groupId>
+            <artifactId>core-lib</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+
 </project>

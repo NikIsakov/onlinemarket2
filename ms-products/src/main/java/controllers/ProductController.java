@@ -4,6 +4,7 @@ import entities.Product;
 import entities.ProductDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import exceptions.ResourceNotFoundException;
@@ -13,6 +14,7 @@ import services.ProductService;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
+@Component
 public class ProductController {
     private final ProductService productService;
 

@@ -1,4 +1,4 @@
-package ru.geekbrains.market.homework.entities;
+package entities;
 
 import lombok.Data;
 
